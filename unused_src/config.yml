@@ -1,0 +1,14 @@
+database:
+  path: license_plates.db
+  table_name: detections
+output:
+  display_video: true
+  json_path: detections/
+  save_json: true
+  save_video: true
+  video_path: processed_videos/
+processing:
+  batch_size: 1
+  detection_threshold: 0.5
+  frame_skip: 2
+  max_queue_size: 100

@@ -1,0 +1,52 @@
+detector:
+  frame_skip: 4
+  display_scale: 0.6
+  process_scale: 1.0
+  min_confidence: 0.5
+  show_display: true
+  save_detections: true
+  save_video: true
+  debug_mode: false
+  detection_persistence: 15
+  iou_threshold: 0.5
+
+visualization:
+  box_thickness: 2
+  text_scale: 0.8
+  text_thickness: 2
+  overlay_alpha: 0.7
+
+storage:
+  type: sqlite
+  path: license_plates.db
+
+logging:
+  version: 1
+  formatters:
+    standard:
+      format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  handlers:
+    console:
+      class: logging.StreamHandler
+      level: INFO
+      formatter: standard
+      stream: ext://sys.stdout
+    file:
+      class: logging.FileHandler
+      level: DEBUG
+      formatter: standard
+      filename: license_plate_detector.log
+  root:
+    level: INFO
+    handlers: [console, file]
+
+following_pattern:
+  min_detections: 5
+  time_window: 30
+  min_detection_ratio: 0.3
+  analysis_interval: 300
+  confidence_weights:
+    time_span: 0.4
+    detection_ratio: 0.4
+    count: 0.1
+    confidence: 0.1

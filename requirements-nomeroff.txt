@@ -1,0 +1,29 @@
+cython
+setuptools
+numpy==1.23.5
+imgaug>=0.4.0
+opencv_python
+scikit_image
+asyncio
+gitpython
+pycocotools
+ujson
+pillow
+tqdm
+matplotlib
+scipy
+torch>=1.12
+torchvision>=0.13
+PyYAML>=5.4
+seaborn
+pytorch_lightning==1.8.6
+ipywidgets
+gevent
+termcolor
+scikit-learn
+ultralytics==8.0.45
+
+# git repos
+craft_text_detector @ git+https://github.com/ria-com/craft-text-detector.git
+PyTurboJPEG @ git+https://github.com/lilohuang/PyTurboJPEG.git
+modelhub_client @ git+https://github.com/ria-com/modelhub-client.git
